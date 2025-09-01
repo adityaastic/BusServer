@@ -1,0 +1,53 @@
+# Node modules
+/node_modules/
+/npm-debug.log
+/yarn-error.log
+/package-lock.json
+/yarn.lock
+
+# Metro bundler cache
+.expo
+.expo-shared
+/metro-cache/
+/.expo-web
+
+# Logs
+*.log
+*.tmp
+
+# React Native build
+/android/.gradle/
+/android/app/build/
+/android/build/
+/android/.idea/
+/android/local.properties
+/android/.cxx/
+/android/gradle.properties
+/android/gradlew
+/android/gradlew.bat
+
+# iOS build
+/ios/build/
+/ios/Pods/
+/ios/Podfile.lock
+/ios/*.xcworkspace
+/ios/DerivedData/
+/ios/.idea/
+/ios/.DS_Store
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# VSCode / IDE settings
+.vscode/
+/.idea/
+/*.iml
+
+# Babel / TypeScript
+/babel.config.js
+/tsconfig.tsbuildinfo

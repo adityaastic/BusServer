@@ -6,7 +6,8 @@ import { PORT } from './config/config.js'
 import userRoutes from './routes/user.js'
 import busRoutes from './routes/bus.js'
 import ticketRoutes from './routes/ticket.js'
-import { buildAdminJS } from './config/Setup.js'
+import { buildAdminJS } from './config/setup.js'
+
  
 
 dotenv.config()

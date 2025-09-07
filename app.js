@@ -28,6 +28,11 @@ app.use('/user', userRoutes)
 app.use('/bus', busRoutes)
 app.use('/ticket', ticketRoutes)
 
+app.get("/admin/test", (req, res) => {
+  console.log("✅ /admin/test hit hua");
+  res.json({ message: "Hello from backend 👋" });
+});
+
 // Start function
 const start = async () => {
   try {

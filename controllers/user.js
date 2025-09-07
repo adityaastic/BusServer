@@ -23,13 +23,17 @@ const generateTokens = (user) => {
 
 // 🔹 Login / Signup with Google
 const loginOrSignUp = async (req, res) => {
+  console.log("Login/Signup request received");
   const { id_token } = req.body;
+  console.log("ID Token received:", id_token);
 
   try {
     const ticket = await client.verifyIdToken({
       idToken: id_token,
       audience: process.env.GOOGLE_CLIENT_ID,
     });
+
+    console.log("Google ID Token verified");
 
     const payload = ticket.getPayload();
     const { email, sub: google_id, name, picture, email_verified } = payload;
@@ -71,6 +75,7 @@ const loginOrSignUp = async (req, res) => {
 // 🔹 Refresh Token handler
 const refreshToken = async (req, res) => {
   const { refreshToken: reqRefreshToken } = req.body;
+  console.log("Refresh token request received");
   if (!reqRefreshToken) {
     return res.status(401).json({ error: "No refresh token provided" });
   }
